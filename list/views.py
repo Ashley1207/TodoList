@@ -52,7 +52,7 @@ def deleteTodoList(request):
 @csrf_exempt
 def returnIdTODO(request):
 
-    if request.method == 'POST':
+    if request.method == 'GET':
         contentId=request.POST.get('contentId')
         idDB=Content.objects.filter(cId=contentId).first()
         if idDB:
