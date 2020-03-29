@@ -53,7 +53,7 @@ def deleteTodoList(request):
 def returnIdTODO(request):
 
     if request.method == 'GET':
-        contentId=request.POST.get('contentId')
+        contentId=request.GET.get('contentId')
         idDB=Content.objects.filter(cId=contentId).first()
         if idDB:
             try:
